@@ -1,3 +1,7 @@
+# Algorithm: Selection Sort
+# Time Complexity: O(n^2)
+# Space Complexity: O(1)
+
 def selection_sort(arr):
     n = len(arr)
 
@@ -13,6 +17,8 @@ def selection_sort(arr):
     return arr
 
 
-arr = [29, 10, 14, 37, 13]
+arr = list(map(int, input("Enter array elements separated by space: ").split()))
 
-print("Sorted array:", selection_sort(arr))
+sorted_array = selection_sort(arr)
+
+print("Sorted array:", sorted_array)
