@@ -1,3 +1,7 @@
+# Algorithm: Binary Search
+# Time Complexity: O(log n)
+# Space Complexity: O(1)
+
 def binary_search(arr, target):
     left = 0
     right = len(arr) - 1
@@ -15,11 +19,14 @@ def binary_search(arr, target):
     return -1
 
 
-arr = [1, 3, 5, 7, 9, 11]
-target = 7
+# User input
+arr = list(map(int, input("Enter sorted array elements separated by space: ").split()))
+target = int(input("Enter element to search: "))
 
+# Function call
 result = binary_search(arr, target)
 
+# Output
 if result != -1:
     print("Element found at index:", result)
 else:
