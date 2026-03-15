@@ -1,5 +1,10 @@
+# Algorithm: Merge Sort
+# Time Complexity: O(n log n)
+# Space Complexity: O(n)
+
 def merge_sort(arr):
     if len(arr) > 1:
+
         mid = len(arr) // 2
         left = arr[:mid]
         right = arr[mid:]
@@ -31,6 +36,11 @@ def merge_sort(arr):
     return arr
 
 
-arr = [38, 27, 43, 3, 9, 82, 10]
+# User input
+arr = list(map(int, input("Enter array elements separated by space: ").split()))
 
-print("Sorted array:", merge_sort(arr))
+# Function call
+sorted_array = merge_sort(arr)
+
+# Output
+print("Sorted array:", sorted_array)
