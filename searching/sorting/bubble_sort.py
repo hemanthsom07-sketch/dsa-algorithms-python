@@ -1,3 +1,7 @@
+# Algorithm: Bubble Sort
+# Time Complexity: O(n^2)
+# Space Complexity: O(1)
+
 def bubble_sort(arr):
     n = len(arr)
 
@@ -9,8 +13,11 @@ def bubble_sort(arr):
     return arr
 
 
-arr = [64, 34, 25, 12, 22, 11, 90]
+# User input
+arr = list(map(int, input("Enter array elements separated by space: ").split()))
 
+# Function call
 sorted_array = bubble_sort(arr)
 
+# Output
 print("Sorted array:", sorted_array)
