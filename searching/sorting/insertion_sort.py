@@ -1,3 +1,7 @@
+# Algorithm: Insertion Sort
+# Time Complexity: O(n^2)
+# Space Complexity: O(1)
+
 def insertion_sort(arr):
     for i in range(1, len(arr)):
         key = arr[i]
@@ -11,7 +15,9 @@ def insertion_sort(arr):
 
     return arr
 
-
-arr = [12, 11, 13, 5, 6]
-
-print("Sorted array:", insertion_sort(arr))
+#user input
+arr = list(map(int, input("Enter array elements separated by space: ").split()))
+#function cell
+sorted_array = insertion_sort(arr)
+#output
+print("Sorted array:", sorted_array)
