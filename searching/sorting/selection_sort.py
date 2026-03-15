@@ -16,9 +16,9 @@ def selection_sort(arr):
 
     return arr
 
-
+#user input
 arr = list(map(int, input("Enter array elements separated by space: ").split()))
-
+#function cell
 sorted_array = selection_sort(arr)
-
+#output
 print("Sorted array:", sorted_array)
