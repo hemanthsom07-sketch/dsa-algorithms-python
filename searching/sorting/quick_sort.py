@@ -1,16 +1,46 @@
-def quick_sort(arr):
-    if len(arr) <= 1:
-        return arr
+# Algorithm: Merge Sort
+# Time Complexity: O(n log n)
+# Space Complexity: O(n)
 
-    pivot = arr[len(arr)//2]
+def merge_sort(arr):
+    if len(arr) > 1:
 
-    left = [x for x in arr if x < pivot]
-    middle = [x for x in arr if x == pivot]
-    right = [x for x in arr if x > pivot]
+        mid = len(arr) // 2
+        left = arr[:mid]
+        right = arr[mid:]
 
-    return quick_sort(left) + middle + quick_sort(right)
+        merge_sort(left)
+        merge_sort(right)
+
+        i = j = k = 0
+
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                arr[k] = left[i]
+                i += 1
+            else:
+                arr[k] = right[j]
+                j += 1
+            k += 1
+
+        while i < len(left):
+            arr[k] = left[i]
+            i += 1
+            k += 1
+
+        while j < len(right):
+            arr[k] = right[j]
+            j += 1
+            k += 1
+
+    return arr
 
 
-arr = [10, 7, 8, 9, 1, 5]
+# User input
+arr = list(map(int, input("Enter array elements separated by space: ").split()))
 
-print("Sorted array:", quick_sort(arr))
+# Function call
+sorted_array = merge_sort(arr)
+
+# Output
+print("Sorted array:", sorted_array)
