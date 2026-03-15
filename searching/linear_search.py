@@ -1,3 +1,7 @@
+# Algorithm: Linear Search
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 def linear_search(arr, target):
     for i in range(len(arr)):
         if arr[i] == target:
@@ -5,11 +9,14 @@ def linear_search(arr, target):
     return -1
 
 
-arr = [4, 7, 1, 9, 3]
-target = 9
+# User input
+arr = list(map(int, input("Enter array elements separated by space: ").split()))
+target = int(input("Enter element to search: "))
 
+# Function call
 result = linear_search(arr, target)
 
+# Output
 if result != -1:
     print("Element found at index:", result)
 else:
